@@ -3,8 +3,8 @@
       app:
          build: .
          container_name : app
-         volumes:
-            - //c/docker/dockerproject:/var/www
+         #volumes:
+         #   - .:/var/www
          networks:
             - app-network
          # depends_on:
@@ -19,7 +19,7 @@
          ports: 
             - "33006:3306"
          volumes:
-            - //c/docker/dbdata:/var/lib/mysql
+            - ./dbdata:/var/lib/mysql
          environment: 
             - MYSQL_DATABASE=laravel
             - MYSQL_ROOT_PASSWORD=root
@@ -40,7 +40,7 @@
         ports : 
            - "8000:80"
         volumes:
-           - //c/docker/dockerproject:/var/www
+           - .:/var/www
         depends_on:
            - app
         networks:
