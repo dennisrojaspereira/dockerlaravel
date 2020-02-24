@@ -18,6 +18,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 #      php artisan key:generate && \
 #      php artisan config:cache 
 
+COPY ./.docker/ /var/www/.docker
 # RUN ls -s public html
 
 EXPOSE 9000
