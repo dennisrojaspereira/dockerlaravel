@@ -13,3 +13,4 @@ yarn-error.log
 /dbdata/*.*
 /dbdata
 /dbdata/sys/
+/dbdata/sys/*.*
